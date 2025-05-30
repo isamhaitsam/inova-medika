@@ -84,7 +84,7 @@ class KasirController extends Controller
     $pdf = PDF::loadView('admin.pages.kasir.lunas.cetak', compact('kunjungan'));
 
     // Bisa langsung download atau stream ke browser
-return $pdf->download(
+    return $pdf->stream(
     'Pembayaran-' . 
     $kunjungan->pasien->nama . '-' . 
     \Carbon\Carbon::parse($kunjungan->pembayaran->tanggal_bayar)->format('d-m-Y_H-i') . 

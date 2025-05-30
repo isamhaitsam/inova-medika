@@ -19,12 +19,12 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $kunjungan->pasien->nama }}</td>
-                            <td>{{ $kunjungan->created_at->format('d M Y') }}</td>
+                            <td>{{ $kunjungan->updated_at->format('d M Y') }}</td>
                             <td><button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
                                     data-bs-target="#detailModal{{ $kunjungan->id }}">
                                     Detail
                                 </button></td>
-                                @include('admin.pages.dokter.sudah.detail')
+                            @include('admin.pages.dokter.sudah.detail')
                         </tr>
                     @endforeach
                 </tbody>
